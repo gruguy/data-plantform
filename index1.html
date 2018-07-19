@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>大数据平台</title>
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<style type="text/css">
+			.chinaMapWrapper {
+				height: 100%;
+				min-height: 800px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="loadings">
+			<div class="preloaders">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		<div class="header">
+			<div class="container">
+				<h1>大数据服务搜索平台</h1>
+				<div class="fr">
+					<a href="#">关于我们</a>
+					<a href="#">反馈</a>
+					<a href="#">联系我们</a>
+				</div>
+			</div>
+		</div>
+		<div class="nav">
+			<ul>
+				<li>
+					<div class="wrap">
+						<div class="spans">
+							<span class="icon icon1"></span>
+							<span class="words">基本信息</span>
+						</div>
+					</div>
+
+					<div class="subs listShow listShow1">
+						<h4><span class="close"> <img src="img/close.png"/></span></h4>
+						<h5>药品经营介绍</h5>
+						<div class="cont">
+							<p>《药品管理法》第一百零二条规定：药品经营企业，是指经营药品的专营企业或兼营企业。<br /> 《药品管理法实施条例》第八十三条：
+								<br /> 药品经营方式，是指药品批发和药品零售。
+								<br /> 药品经营范围，是指经药品监督管理部门核准经营药品的品种类别。
+								<br /> 药品批发企业，是指将购进的药品销售给药品生产企业、药品经营企业、医疗机构的药品经营企业。
+								<br /> 药品零售企业，是指将购进的药品直接销售给消费者的药品经营企业。
+
+							</p>
+						</div>
+					</div>
+				</li>
+				<li class="active">
+					<div class="wrap">
+						<div class="spans">
+							<span class="icon icon2"></span>
+							<span class="words">药品经营</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="wrap">
+						<div class="spans">
+							<span class="icon icon3"></span>
+							<span class="words">企业信用</span>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="wrap">
+						<div class="spans">
+							<span class="icon icon5"></span>
+							<span class="words">舆情信息</span>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+		<div class="content">
+			<div class="searchBox">
+				<div class="form-group">
+					<input type="text" name="keywords" id="keywords" value="" placeholder="输入产品/企业" />
+					<span class="btn"></span>
+				</div>
+				<div class="toggle"></div>
+			</div>
+			<!--中国地图-->
+			<div id="chinaMapWrapper" class="chinaMapWrapper"></div>
+			<!--搜索结果数据标注-->
+			<div class="marker">
+				<h1>药品企业分布</h1>
+				<!--<ul>
+					<h2>最多省份分布</h2>
+					<li><span class="share share1"></span><span class="words">陕西：25万</span></li>
+					<li><span class="share share2"></span><span class="words">四川：23万</span></li>
+					<li><span class="share share3"></span><span class="words">江苏：19万</span></li>
+				</ul>-->
+				<ul>
+					<!--<h2>其他省份分布</h2>-->
+					<li><span class="share share4"></span><span class="words">8万以上</span></li>
+					<li><span class="share share5"></span><span class="words">5万以上</span></li>
+					<li><span class="share share6"></span><span class="words">0-5万</span></li>
+				</ul>
+			</div>
+			<!--切换列表-->
+			<div class="switchover">
+				<div class="toggle"></div>
+				<ul>
+					<li>
+						<h4><i></i>药品功能分类占比统计</h4>
+						<div id="svgStatistics1" class="svgStatistics svgStatistics1"></div>
+					</li>
+					<li>
+						<h4><i></i>药品销售总量统计</h4>
+						<div id="svgStatistics2" class="svgStatistics svgStatistics2"></div>
+					</li>
+					<li>
+						<h4><i></i>区域药品零售统计</h4>
+						<div id="svgStatistics3" class="svgStatistics svgStatistics3"></div>
+					</li>
+					<li>
+						<h4><i></i>药品分类统计</h4>
+						<div id="svgStatistics4" class="svgStatistics svgStatistics4"></div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="footer">
+			<div class="container">
+				<div class="fl">
+					<a href="#">隐私条款</a> | <a href="#">使用条款</a> | <a href="#">关于我们</a> | <span>最后更新：2016.4.26  </span>
+				</div>
+				<div class="fr">津ICP备12645632号-1</div>
+			</div>
+		</div>
+		<!--新绘制的省份dom-->
+		<div id="province" style="">
+			<div class="pro_bg"></div>
+		</div>
+	</body>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/layer.js"></script>
+	<script src="js/fn.js"></script>
+	<script src="js/echarts.js"></script>
+	<script src="js/china-map1.js"></script>
+	<script src="js/index1.js"></script>
+	<script src="js/module/chart1.js"></script>
+	<script src="js/initPage.js"></script>
+
+</html>

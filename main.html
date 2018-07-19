@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>大数据平台</title>
+		<link rel="stylesheet" type="text/css" href="css/app.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" user-scalable="no">
+		<style type="text/css">
+			html,
+			body {
+				overflow: auto;
+			}
+			body{
+				overflow-y: hidden;
+			}
+
+			::-webkit-scrollbar {
+				width: 10px;
+			}
+			body::-webkit-scrollbar  {
+				height: 10px;
+			}
+			::-webkit-scrollbar-track{
+			 	background-color: #999;
+			 	-webkit-box-shadow:none;
+			 }
+			 ::-webkit-scrollbar-thumb{
+			 	-webkit-box-shadow:none;
+			 }
+
+			.chinaMapWrapper {
+				height: 100%;
+				min-height: 800px;
+			}
+		</style>
+	</head>
+
+	<body id="main">
+		<a href="index1.html" class="logo center">
+			<img src="img/logoDrug.png" width="180" />
+		</a>
+		<div class="content">
+			<!--左侧容器-->
+			<div class="lt">
+				<div class="showBox">
+					<div class="tit">近十年药品零售规模</div>
+					<div id="lChart1" class="chart"></div>
+				</div>
+				<div class="showBox">
+					<div class="tit">近一年医药购买人数指数和总花费指数</div>
+					<div id="lChart2" class="chart"></div>
+				</div>
+				<div class="showBox">
+					<div class="tit">近一年滋补调养．呼吸道疾病．男科疾病药品销售指数</div>
+					<div id="lChart3" class="chart"></div>
+				</div>
+			</div>
+			<!--中间容器-->
+			<div class="ct">
+				<div class="top">
+					<!--品类销售占比的时间趋势变化-->
+					<div id="cChart1" class="chart"></div>
+					<!--品类销售额占比-->
+					<div id="cChart2" class="chart"></div>
+					<!--药品价格指数（本年）-->
+					<div id="cChart3" class="chart"></div>
+				</div>
+				<div class="btm">
+					<div class="map">
+						<div class="marker">
+							<h1>各省市购买力指数</h1>
+							<ul>
+								<li><span class="share share1"></span><span class="words"> &lt; 0.5%</span></li>
+								<li><span class="share share2"></span><span class="words">0.5% ~ 1%</span></li>
+								<li><span class="share share3"></span><span class="words">1% ~ 1.5%</span></li>
+								<li><span class="share share4"></span><span class="words">1.5% ~ 2.4%</span></li>
+								<li><span class="share share5"></span><span class="words">2.4% ~ 6.1%</span></li>
+								<li><span class="share share6"></span><span class="words">&gt;=6.1%</span></li>
+							</ul>
+						</div>
+						<div id="chinaMap" class="chart"></div>
+					</div>
+					<div class="bBtm">
+						<!--份额毛利分析-->
+						<div id="cbChart1" class="chart">
+							<div class="bg">
+								<div class="h"></div>
+								<div class="v"></div>
+							</div>
+							<div id="cbChartChart1"></div>
+						</div>
+
+						<!--药品市场占比-->
+						<div id="cbChart2" class="chart"></div>
+					</div>
+				</div>
+			</div>
+			<!--右侧容器-->
+			<div class="rt">
+				<div class="showBox">
+					<div class="tit">药品品类销售额占比</div>
+					<div id="rChart1" class="chart"></div>
+				</div>
+				<div class="showBox">
+					<div class="tit">近两年中西药品价格段分布</div>
+					<div id="rChart2" class="chart"></div>
+				</div>
+				<div class="showBox">
+					<div class="tit">近一年肝病.肠胃疾病.心脑血管.癌症的销售占比</div>
+					<div id="rChart3" class="chart"></div>
+				</div>
+			</div>
+		</div>
+		<div class="smartWeather"></div>
+		<div class="footer">
+			<div class="container">
+				<div class="center">©2016 Essence 泽达易盛(天津)科技股份有限公司</div>
+			</div>
+		</div>
+	</body>
+	<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+	<script src="js/echarts.js"></script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/layer.js"></script>
+	<script src="js/china.js"></script>
+	<script src="js/fn.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/china-map-main.js"></script>
+	<script src="js/smartWeather.js"></script>
+	<script type="text/javascript">
+		$('.smartWeather').smartWeather();
+		//判断IE
+		var ie = !-[1,];
+		if(ie){
+			//若为IE，手动设置部分失效css3布局（flexBox）以及样式
+			$('.content').height($('body').height()-100);
+			$('.lt .showBox, .rt .showBox').height(($('.content').height()-80)/3);
+			$('.lt .showBox .chart, .rt .showBox .chart').height($('.lt .showBox, .rt .showBox').height()-35);
+			$('.ct .top .chart').css({
+				float:'left',
+				width: $('.ct .top').width()/3,
+				height: $('.ct .top').height(),
+			});
+			$('.ct').css({
+				height:$('.lt').height()-10
+			});
+			$('.ct .btm').css({
+				height:parseInt($('.ct').height())-240
+			});
+			$('.ct .btm .map').css({
+				height: $('.ct .btm').height()*0.72
+			});
+			$('.ct .btm .bBtm').css({
+				height: $('.ct .btm').height()*0.28
+			});
+			$('.ct .btm .bBtm #cbChart1').css({
+				width: $('.ct .bBtm').width()*0.6,
+				height:$('.ct .bBtm').height(),
+				float:'left'
+			});
+
+			$('.ct .btm .bBtm #cbChart2').css({
+				width: $('.ct .bBtm').width()*0.4,
+				height:$('.ct .bBtm').height(),
+				float:'left'
+			});
+
+			main();
+		}else{
+			main();
+		}
+	</script>
+
+</html>

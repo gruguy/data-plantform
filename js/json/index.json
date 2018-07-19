@@ -1,0 +1,122 @@
+{
+	//首页
+	"charts":{
+		"drugFunction":[{"funName":"drug1","funNumber":500},{"funName":"drug1","funNumber":500},{"funName":"drug2","funNumber":400},{"funName":"drug3","funNumber":300},{"funName":"drug4","funNumber":200},{"funName":"drug5","funNumber":20}],
+		"drugSaleTop5":{"unit":"批","data":[{"drugName":"汇仁肾宝","drugNumber":3000},{"drugName":"汇仁肾宝","drugNumber":5000},{"drugName":"汇仁肾宝","drugNumber":4000},{"drugName":"汇仁肾宝","drugNumber":2000},{"drugName":"汇仁肾宝","drugNumber":1000}]},
+		"areaSaleTop5":{"unit":"批","data":[{"areaName":"陕西","drugNumber":3000},{"areaName":"福建","drugNumber":5000},{"areaName":"上海","drugNumber":4000},{"areaName":"浙江","drugNumber":2000},{"areaName":"江苏","drugNumber":1000}]},
+		"drugClassify":[{"classifyName":"otc甲","drugNumber":3000},{"classifyName":"otc乙","drugNumber":2000},{"classifyName":"处方药","drugNumber":6000},{"classifyName":"乙类非处方","drugNumber":4000}]
+	},
+	//产品
+	"product": {
+		"drugName":"阿莫西林",
+		"unit":"盒",
+		"homeMapBase":{"330000": {"saleNumber":5439,"latestDate":"2015-06-20"}},
+		"homeMapBaseCity":{"330100": {"saleNumber":5439,"latestDate":"2015-06-20"}, "330200": {"saleNumber":5439,"latestDate":"2015-06-20"}, "330400": {"saleNumber":5439,"latestDate":"2015-06-20"}, "330800": {"saleNumber":5439,"latestDate":"2015-06-20"}},
+		"homeMapRegDataCitys":{
+			"330100":[{"CITY":"330100","HOMEMAPID":"4BDC2FA2-A15B-43F3-AC25-1B19DB3F0679","IENTERPRISETYPEID":"28","NUM":4, "PROVINCE":"330000", "TYPE":"4"}]
+		},
+		"homeMapRegDatas":{
+			"330000":[{ "HOMEMAPID":"062A0B3B-9D41-4E6E-8B87-06625F4872C7", "IENTERPRISETYPEID":"29", "NUM":1763, "PROVINCE":"330000", "TYPE":"4"}]
+		},
+		"charts":{
+			"drugSaleYear":[{"year":2006,"drugNumber":500},{"year":2007,"drugNumber":400},{"year":2008,"drugNumber":300},{"year":2009,"drugNumber":200},{"year":2010,"drugNumber":20},{"year":2011,"drugNumber":500},{"year":2012,"drugNumber":500},{"year":2013,"drugNumber":400},{"year":2014,"drugNumber":300},{"year":2015,"drugNumber":200},{"year":2016,"drugNumber":20}],
+			"producer":{"unit":"批","data":[{"producerName":"汇仁肾宝","drugNumber":3000},{"producerName":"汇仁肾宝","drugNumber":5000},{"producerName":"汇仁肾宝","drugNumber":4000},{"producerName":"汇仁肾宝","drugNumber":2000},{"producerName":"汇仁肾宝","drugNumber":1000}]},
+			"areaSaleTop5":{"unit":"批","data":[{"areaName":"陕西","drugNumber":3000},{"areaName":"福建","drugNumber":5000},{"areaName":"上海","drugNumber":4000},{"areaName":"浙江","drugNumber":2000},{"areaName":"江苏","drugNumber":1000}]},
+			"fastestGrowth":[{"areaName":"陕西","drugNumber":3000,"rate":"20%"},{"areaName":"天津","drugNumber":2000,"rate":"20%"},{"areaName":"山东","drugNumber":6000,"rate":"20%"},{"areaName":"海南","drugNumber":4000,"rate":"20%"},{"areaName":"福建","drugNumber":4000,"rate":"20%"}]
+		}
+	},
+	//企业
+	"ent":{
+		"data":[{
+			"entName": "强生有限公司",
+			"locate":[121.4648, 31.2891],
+			"drugNumber": 90
+		}, {
+			"entName": "强生股份有限公司",
+			"locate":[121.4648, 31.2891],
+			"drugNumber": 120
+		}, {
+			"entName": "强生合资股份有限公司",
+			"locate":[121.4648, 31.2891],
+			"drugNumber": 120
+		}, {
+			"entName": "强生易盛股份有限公司",
+			"locate":[121.4648, 31.2891],
+			"drugNumber": 120
+		}, {
+			"entName": "强生易盛合资股份有限公司",
+			"locate":[121.4648, 31.2891],
+			"drugNumber": 140
+		}]
+	},
+	//生产企业
+	"producer":{
+		"manufacturer":{
+			"entName": "强生有限公司",
+			"locate":[121.4648, 31.2891]
+		},
+		"dataP":[{
+			"entName": "强生有限公司",
+			"locate":[121.4648, 31.2891],
+			"drugNumber": 90
+		}, {
+			"entName": "强生股份有限公司",
+			"locate":[121.4648, 31.2891],
+			"drugNumber": 120
+		}, {
+			"entName": "强生合资股份有限公司",
+			"locate":[121.4648, 31.2891],
+			"drugNumber": 120
+		}, {
+			"entName": "强生易盛股份有限公司",
+			"locate":[121.4648, 31.2891],
+			"drugNumber": 120
+		}, {
+			"entName": "强生易盛合资股份有限公司",
+			"locate":[121.4648, 31.2891],
+			"drugNumber": 140
+		}],
+		"dataCitys":{
+			"浙江":[{
+				"entName": "强生有限公司",
+				"locate":[121.4648, 31.2891],
+				"drugNumber": 90
+			}, {
+				"entName": "强生股份有限公司",
+				"locate":[121.4648, 31.2891],
+				"drugNumber": 120
+			}, {
+				"entName": "强生合资股份有限公司",
+				"locate":[121.4648, 31.2891],
+				"drugNumber": 120
+			}, {
+				"entName": "强生易盛股份有限公司",
+				"locate":[121.4648, 31.2891],
+				"drugNumber": 120
+			}, {
+				"entName": "强生易盛合资股份有限公司",
+				"locate":[121.4648, 31.2891],
+				"drugNumber": 140
+			}]
+		},
+		"charts":{
+			"producerDrugs":[{"category":"清热解毒类","data":["阿莫西林","阿莫西林","阿莫西林","阿莫西林","阿莫西林"]},{"category":"清热解毒类","data":["阿莫西林","阿莫西林","阿莫西林","阿莫西林","阿莫西林"]},{"category":"清热解毒类","data":["阿莫西林","阿莫西林","阿莫西林","阿莫西林","阿莫西林"]},{"category":"清热解毒类","data":["阿莫西林","阿莫西林","阿莫西林","阿莫西林","阿莫西林"]}],
+			"producerRanking":{"unit":"盒","data":[{"producerName":"汇仁肾宝","drugNumber":3000},{"producerName":"汇仁肾宝","drugNumber":5000},{"producerName":"汇仁肾宝","drugNumber":4000},{"producerName":"汇仁肾宝","drugNumber":2000},{"producerName":"汇仁肾宝","drugNumber":1000}]}//前三名排名，本厂之前一名，本场排名
+		}
+		
+	},
+	//经营企业
+	"operater":{
+		"data":[{
+			"entName": "强生有限公司",
+			"locate":[121.4648, 31.2891],
+			"drugNumber": 90,
+			"latestDate":"2015-06-20"
+		}],
+		"charts":{
+			"storeAndSale":[{"category":"store","times":["2015.7","2015.8","2015.9","2015.10","2015.11","2015.12","2016.1","2016.2","2016.3","2016.4","2016.5","2016.6"],"data":["10000","10000","10000","10000","10000","10000","10000","10000","10000","10000","10000","10000"]},{"category":"store","times":["2015.7","2015.8","2015.9","2015.10","2015.11","2015.12","2016.1","2016.2","2016.3","2016.4","2016.5","2016.6"],"data":["10000","10000","10000","10000","10000","10000","10000","10000","10000","10000","10000","10000"]}],
+			"saleCategory":{"data":[{"drugName":"汇仁肾宝","drugNumber":3000},{"drugName":"汇仁肾宝","drugNumber":5000},{"drugName":"汇仁肾宝","drugNumber":4000},{"drugName":"汇仁肾宝","drugNumber":2000},{"drugName":"汇仁肾宝","drugNumber":1000}]}
+		}
+		
+	}
+}
